@@ -1,0 +1,283 @@
+.member-profile-card {
+    padding: 30px 10px 0;
+    border-radius: 5px;
+    position: sticky;
+    top: 60px;
+    z-index: 11;
+}
+
+.member-image-wrp {
+    margin: 15px 0 30px 0;
+}
+
+.member-profile-card .member-image-wrp .member-image {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    border-radius: 100%;
+    margin: 0 auto 20px;
+}
+.member-profile-card .member-image-wrp .member-image img{
+    width: 100%;
+}
+
+.member-profile-card .member-image-wrp .member-image .circle-it {
+    overflow: hidden;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: block;
+    border-radius: 100%;
+}
+.member-profile-status{
+    color: var(--success-color);
+    font-size: 14px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
+.member-profile-status svg{
+    margin-right: 5px;
+    width: 20px;
+}
+.member-profile-card .member-image-wrp .member-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-profile-card .member-image-wrp .image-changer {
+    position: absolute;
+    top: 159px;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 25px;
+    left: 156px;
+}
+
+/* Membership block  */
+
+.member-profile-card .membership-block {
+    background-color: #FFEBE4;
+    padding: 15px;
+    margin: 0 -10px;
+}
+
+.member-profile-card .membership-block-title-wrp::after, .member-profile-card .membership-block-title-wrp::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.member-profile-card .membership-block::after, .member-profile-card .membership-block::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.member-profile-card .membership-block-title-wrp {
+    float: left;
+}
+
+.member-profile-card .membership-block-title-wrp img {
+    float: left;
+    margin-right: 10px;
+    width: 30px;
+}
+
+.member-profile-card .membership-block-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #ff5722;
+}
+
+.member-profile-card .membership-block-des {
+    font-size: 12px;
+    color: #ff5722;
+}
+
+.member-profile-card .membership-block .renew-btn {
+    float: right;
+}
+
+.member-profile-card .member-card-name {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-color)
+}
+
+.member-profile-card  .member-info-box-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.member-profile-card  .member-info-box-head-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.member-profile-card  .member-info-box-head-icon {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--icon-background);
+    border-color: var(--border-color);
+}
+
+.member-profile-card  .member-info-box-head-icon svg {
+    width: 20px;
+    color: var(--primary-color);
+}
+
+.member-profile-card  .member-info {
+    font-size: 14px;
+    display: flex;
+    margin: 15px 0;
+    justify-content: space-between;
+}
+.member-profile-card  .member-info-h{
+    font-weight: 500;
+    color: var(--primary-color);
+}
+.member-profile-card  .member-info-d{
+    color: #999;
+}
+
+/* Detail Page */
+.top-detail-box {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.top-detail-box .detail-name {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.top-detail-box .thumbnail-image {
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.top-detail-box .thumbnail-image img {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.top-detail-box .race-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    display: -webkit-flex;
+    gap: 5px;
+}
+
+.top-detail-box .race-detail-list .race-detail-box {
+    border: 1px dashed var(--border-color);
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+.top-detail-box .race-detail-list .race-detail-box-heading {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.top-detail-box .race-detail-list .race-detail-box-value {
+    color: var(--second-color);
+    font-weight: 600;
+}
+
+.thumbs-up-icon,.donate-icon {
+    display: block;
+    width: 40px;
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #4cac50;
+    border: 1px solid #4cac50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all ease;
+}
+.thumbs-up-icon:focus,.donate-icon:focus,
+.thumbs-up-icon:active,.donate-icon:active{
+    outline-color: #4cac50;
+    outline-offset: 3px;
+}
+.thumbs-up-icon.lg,
+.donate-icon.lg{
+    width: 50px;
+    height: 50px;
+    line-height: 60px;
+}
+.thumbs-up-icon:hover{
+    transform: rotate(360deg);
+    background-color: #4cac50;
+    border-color: #4cac50;
+}
+.thumbs-up-icon svg{
+    width: 19px;
+    stroke: #fff;
+}
+.donate-icon.lg{
+    background-color: transparent;
+}
+.donate-icon.lg svg{
+    stroke: #4cac50;
+}
+.donate-icon.lg:hover{
+    background-color: #4cac50;
+}
+.donate-icon.lg:hover svg{
+    stroke: #fff;
+}
+.candidates-card-head {
+    font-size: 8px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+}

@@ -1,0 +1,28 @@
+.sidebar .nav .nav-item .nav-link .feather {
+    width: 20px;
+    margin-right: 10px;
+}
+.sidebar .nav .nav-item.active>.nav-link .feather {
+    color: #fff;
+}
+
+.sidebar .nav .nav-item .nav-link .feather.feather-chevron-right {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-left: auto;
+    margin-right: 0;
+    color: #bfccda;
+    width: 15px;
+}
+.sidebar .nav .nav-item .nav-link[aria-expanded="true"] .feather.feather-chevron-right {
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+@media (min-width: 992px){
+    .sidebar-icon-only .sidebar .nav .nav-item .nav-link .feather.feather-chevron-right {
+        display: none;
+    }
+}

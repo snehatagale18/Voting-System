@@ -1,0 +1,27 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo "Pre Build"
+      - echo "Logging in to Amazon ECR..."
+      - aws --version
+      - docker --version
+      - export COMMIT_HASH=$(echo $CODEBUILD_START_TIME)
+      - export IMAGE_TAG=${COMMIT_HASH:=latest}
+      - $(aws ecr get-login --no-include-email)
+  build:
+    commands:
+      - echo "Build commands"
+      - echo "Building image"
+      - echo "$REPOSITORY_URI"
+      - docker build -t $REPOSITORY_URI:latest .
+      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+  post_build:
+    commands:
+      - echo "Post_build"
+      - echo Build completed on `date`
+      - echo Pushing the Docker images...
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - printf '{"url":"%s", "tag":"%s"}' $REPOSITORY_URI $IMAGE_TAG > imageLocation.json
+artifacts:
+  files: '**/*'

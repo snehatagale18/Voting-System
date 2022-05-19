@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+patchesStrategicMerge:
+  - resources/deployment.yaml
+generatorOptions:
+  disableNameSuffixHash: true
+
+namespace: cloudcommunity
+
+
+bases:
+  - ../base
+
+# resources:
+#   - resources/serviceaccount.yaml
+#   - resources/sealed-secret.yaml
+
+namePrefix: "iprototype-voter"
+commonLabels:
+  app: "iprototype-voter"

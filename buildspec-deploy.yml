@@ -1,0 +1,33 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+    commands:
+      - curl -o kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl
+      - chmod +x kubectl
+      - mv ./kubectl /usr/local/bin/kubectl
+      - apt-key adv --refresh-keys --keyserver keyserver.ubuntu.com
+      - apt-get update && apt-get -y install jq python3-pip python3-dev && pip3 install --upgrade awscli
+  pre_build:
+    commands:
+      - echo "Getting credentials"
+  build:
+    commands:
+      - echo "Build commands"
+  post_build:
+    commands:
+      - export IMAGE_URL=$(jq -r .url imageLocation.json)
+      - export IMAGE_TAG=$(jq -r .tag imageLocation.json)
+      - echo Cluster name $EKS_CLUSTER_NAME
+      - aws eks --region us-east-1 update-kubeconfig --name $EKS_CLUSTER_NAME --role-arn arn:aws:iam::$TARGET_ACCOUNT_ID:role/$EKS_ARN_ROLE
+      - kubectl version
+      - echo Running Kustomize and applying yamls
+      - echo ImageTag $IMAGE_TAG
+      - echo RepositoryUri $IMAGE_URL
+      - echo ----------------- PREVIEW
+      - kubectl kustomize ./k8s/$PILLAR/ | sed -e "s@\$IMAGE_TAG@$IMAGE_TAG@" -e "s@\$IMAGE_URI@$IMAGE_URL@" | tee ./output.yaml
+      - echo ----------------- VALIDATION
+      - kubectl create --validate --dry-run -f ./output.yaml
+      - echo ----------------- APPLY
+      - kubectl apply -f ./output.yaml

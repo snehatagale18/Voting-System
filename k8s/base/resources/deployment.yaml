@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: -deployment
+  labels:
+    app: MASSEDIT
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: MASSEDIT
+  template:
+    metadata:
+      labels:
+        app: MASSEDIT
+    spec:
+      volumes:
+        - name: shared-files
+          emptyDir: {}
+        - name: nginx-config
+          configMap:
+            name: iprototype-voter-nginx-configmap
+      containers:
+        - image: DONTTOUCH-replace-me-kustomization
+          name: app
+          ports:
+            - containerPort: 9000
+              protocol: TCP
+          volumeMounts:
+            - name: shared-files
+              mountPath: /var/appfiles
+          lifecycle:
+            postStart:
+              exec:
+                command: ['sh', '-c', 'cp -r /var/www/* /var/appfiles']
+        - image: nginx
+          name: nginx
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          volumeMounts:
+            - name: shared-files
+              mountPath: /var/appfiles
+            - name: nginx-config
+              mountPath: /etc/nginx/conf.d/default.conf
+              subPath: nginx.conf

@@ -1,0 +1,154 @@
+:root {
+    --light-background: #F9FBFF;
+    --icon-background: #D9E8FB;
+    --primary-color: #0A3161;
+    --second-color: #D94040;
+    --border-color: #ededed;
+    --success-color: #34A853;
+    --app-font: 'Ubuntu', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--app-font);
+    overflow-x: hidden;
+    font-size: 14px;
+}
+
+a {
+    color: var(--second-color);
+    text-decoration: none;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.separator {
+    display: block;
+    height: 0;
+    border-bottom: 1px solid #eff2f5;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    color: var(--primary-color);
+    margin-top: 0 !important;
+}
+
+h1, .h1 {
+    font-size: 35px;
+}
+
+h2, .h2 {
+    font-size: 30px;
+}
+
+h3, .h3 {
+    font-size: 25px;
+}
+
+h4, .h4 {
+    font-size: 20px;
+}
+
+h5, .h5 {
+    font-size: 16px;
+}
+
+h6, .h6 {
+    font-size: 14px;
+}
+
+/* Background Color */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-second-color {
+    background-color: var(--second-color) !important;
+}
+
+.bg-grey {
+    background-color: #eee !important;
+}
+
+.text-primary {
+    color: var(--second-color) !important;
+}
+
+a.text-primary:hover {
+    color: var(--second-color) !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+/* Dropdown */
+.dropdown-header {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu.dropleft {
+    left: inherit !important;
+    right: 0 !important;
+    transform: inherit !important;
+    top: 100% !important;
+}
+
+.dropdown-menu {
+    box-shadow: 0 0 50px 0 rgb(82 63 105 / 15%);
+    border-color: var(--border-color);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--second-color);
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    min-width: 250px;
+    font-size: 14px;
+}
+
+.page-title {
+    padding-bottom: 10px
+}
+
+#change-profile-image {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 25px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.badge-primary {
+    background-color: var(--primary-color);
+}

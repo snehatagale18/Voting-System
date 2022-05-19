@@ -1,0 +1,38 @@
+/*-----Donate Amount Select-----*/
+
+.donate-amount-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.donation-form label{
+    margin-bottom: 10px;
+}
+.donation-form label i.fa-asterisk,
+.donation-form .label-heading i.fa-asterisk {
+    font-size: 6px;
+    position: relative;
+    top: -7px;
+    color: #dc3545;
+}
+.amount-select input {
+    display: none;
+}
+
+.amount-select label {
+    display: block;
+    position: relative;
+    padding: 9px 15px;
+    text-align: center;
+    background: #eee;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    border-radius: 30px
+}
+
+.amount-select input:checked~label {
+    background: var(--second-color);
+    color: #fff;
+}

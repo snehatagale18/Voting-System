@@ -1,0 +1,153 @@
+/*-----Create Feedback----*/
+.sort-block {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-bottom: none;
+}
+.questionaire-form-wrp {
+    width: 100%;
+    padding: 10px;
+    min-height: auto;
+}
+
+.questionaire-form-wrp .questionnarie-action {
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.questionaire-form-wrp .copy-question {
+    padding: 5px;
+    line-height: 1;
+    background: #6c757d;
+    font-size: 11px;
+    color: #fff;
+    border-color: #6c757d;
+    margin: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.questionaire-form-wrp .delete-question {
+    padding: 5px;
+    line-height: 1;
+    margin: 0;
+    font-size: 13px;
+    background: #dc3545;
+    border-radius: 3px;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+.questionaire-form-wrp .radio-option, .questionaire-form-wrp .checkbox-option {
+    background: #ffffff;
+    margin-top: 7px;
+    width: 100%;
+    position: relative;
+}
+
+.questionaire-form-wrp .option-input {
+    width: calc(100% - 40px);
+    float: left;
+}
+.questionaire-form-wrp .icon-rt {
+    display: block;
+    float: right;
+    background: #dc3545;
+    text-align: center;
+    line-height: 30px;
+    font-size: 10px;
+    padding: 7px;
+    border-radius: 3px;
+    margin-top: 0;
+    width: 40px;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #dc3545;
+    border-left: 0;
+}
+
+.questionaire-form-wrp .icon-rt {  
+    font-size: 12px;
+    margin: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.option-wrap .icon-lf {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    margin-right: 0;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    top: 14px;
+    left: 9px;
+
+}
+.options > label, .added-option > label {
+    position: relative;
+    display: block;
+    margin-bottom: 9px;
+}
+.options > label:after  , .added-option > label:after{
+    content: '';
+    clear: both;
+    display: block
+}
+.questionaire-form-wrp .radio-option:after, .questionaire-form-wrp .checkbox-option:after{
+    content: '';
+    clear: both;
+    display: block
+}
+.questionnarie-action-wrapper {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 0 15px;
+    border: 1px solid #eee;
+    margin: 0 0 10px 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.feedback-box-actions {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 5px;
+}
+.questionaire-form-wrp .option-input .form-control {
+    padding-left: 30px;
+}
+.option-wrap .add-option {
+    display: inline-block;
+    font-size: 14px;
+    margin: 10px 15px 10px 0;
+}
+.question-block{
+    padding: 15px 0
+}
+.question-block label{
+    display: block;
+    margin-bottom: 10px;
+}
+.sort-block [class*="col-"]{
+    padding: 0 3px;
+}
+.sort-block .row{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.questionaire-form-wrp .option-wrap {
+    margin-top: 8px;
+}
+/* make form rounded */
+.form-control{
+    border-radius: 5px;
+}
+.questionaire-form-wrp .option-input .form-control {
+    border-radius: 5px 0 0 5px;
+}

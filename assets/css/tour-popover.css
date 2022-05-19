@@ -1,0 +1,77 @@
+.popover.tour-tour {
+    padding: 15px;
+    color:#fff;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.bs-popover-auto[x-placement^=bottom] .arrow::after, .bs-popover-bottom .arrow::after {
+    top: 1px;
+    border-bottom-color: var(--primary-color);
+}
+.bs-popover-auto[x-placement^=bottom] .arrow::before, .bs-popover-bottom .arrow::before {
+    top: 0;
+    border-bottom-color: var(--primary-color);
+}
+.bs-popover-auto[x-placement^=bottom] .popover-header::before, .bs-popover-bottom .popover-header::before {
+    border-bottom: none;
+}
+.popover.tour-tour .popover-header {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    padding: 10px 0 0;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.popover.tour-tour .popover-body {
+    color: #fff;
+    text-align: center;
+}
+.popover-navigation *[data-role="next"],
+.popover-navigation *[data-role="prev"]{
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+    transition: 0.3s all ease;
+}
+.popover-navigation *[data-role="next"]:hover{
+    opacity: 0.9;
+}
+
+.popover-navigation *[data-role="prev"]{
+    color: var(--second-color);
+    background-color: transparent;
+}
+.popover-navigation *[data-role="prev"]:hover,
+.popover-navigation *[data-role="prev"]:focus,
+.popover-navigation *[data-role="prev"]:active{
+    color: #fff;
+    background-color: var(--second-color);
+}
+
+
+.popover.tour-tour .btn-group>.btn-group:not(:last-child)>.btn,.popover.tour-tour .btn-group>.btn:not(:last-child):not(.dropdown-toggle),
+.popover.tour-tour .btn-group>.btn-group:not(:first-child)>.btn,.popover.tour-tour .btn-group>.btn:not(:first-child) {
+    border-radius: 30px
+}
+.popover-navigation .btn-group {
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.popover-navigation *[data-role="end"] {
+    background-color: transparent;
+    border-color: transparent;
+    float: none !important;
+    margin-top: 15px;
+}
+.popover-navigation *[data-role="end"]:hover,
+.popover-navigation *[data-role="end"]:focus,
+.popover-navigation *[data-role="end"]:active{
+    text-decoration: underline;
+}
+.popover[class*="tour-"] .popover-navigation {
+    overflow: hidden;
+    padding: 9px 14px;
+    text-align: center;
+}

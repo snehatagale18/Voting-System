@@ -1,0 +1,39 @@
+
+                    .quick-link-box {
+                        border: 1px solid var(--border-color);
+                        border-radius: 10px;
+                        padding: 20px;
+                        background-color: #fff;
+                        display: flex;
+                        text-align: center;
+                        display: -webkit-flex;
+                        flex-direction: column;
+                        text-decoration: none;
+                        justify-content: center;
+                        transition: 0.3s all ease;
+                    }
+
+                    .quick-link-box .quick-link-box-icon {
+                        margin: 0 auto 15px auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 60px;
+                        height: 60px;
+                        padding: 0;
+                        line-height: 60px;
+                        border-radius: 50%;
+                        background-color: var(--light-background);
+                        color: var(--primary-color);
+                    }
+
+                    .quick-link-box h4 {
+                        font-size: 16px;
+                        margin: 0;
+                        font-weight: 500;
+                        color: var(--primary-color);
+                    }
+
+                    .quick-link-box:hover {
+                        box-shadow: 0 0 20px rgb(51 51 51 / 16%);
+                    }

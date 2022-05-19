@@ -1,0 +1,80 @@
+/* Button */
+.btn {
+    border-radius: 30px;
+    padding: 12px 20px;
+    box-shadow: none;
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid #ccc
+}
+.btn .feather,
+.btn .fas{
+    margin-right: 5px;
+    width: 16px;
+    font-size: 16px;
+}
+.btn-sm {
+    padding: 5px 15px;
+}
+/* Primary Button  */
+.btn-primary{
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+    color: #fff;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    color: #fff;
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+    box-shadow: none;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+}
+.btn-primary:hover{
+    filter: brightness(90%);
+}
+/* outline primary */
+.btn-outline-primary {
+    color: var(--second-color);
+    background-color: transparent;
+    background-image: none;
+    border-color: var(--second-color);
+}
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: var(--second-color);
+    background-image: none;
+    border-color: var(--second-color);
+}
+.btn-outline-primary.focus, .btn-outline-primary:focus {
+    box-shadow: none;
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+    box-shadow: none;
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-primary.dropdown-toggle:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+/* danger */
+.btn-danger{
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+    color: #fff;
+}
+/* outline danger */
+.btn-outline-danger {
+    color: var(--second-color);
+    background-color: transparent;
+    background-image: none;
+    border-color: var(--second-color);
+}
